@@ -55,7 +55,7 @@ WorkSphare (parent project)
 > - Validation (`@NotBlank`, `@Email`)  
 > - Global exception handling  
 > - Swagger documentation  
-> - REST endpoints: `http://localhost:8081/api/employees`
+> - REST endpoints: http://localhost:8081/api/employees
 
 > - The **Department Service** is fully implemented:
 > - DTOs & Mappers
