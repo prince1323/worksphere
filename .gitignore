@@ -1,0 +1,24 @@
+# Eclipse / IDE
+*.classpath
+*.project
+*.settings/
+bin/
+target/
+
+# Maven
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# Spring Boot
+*.jar
+*.war
+
+# IntelliJ
+.idea/
+*.iml
+
+# Others
+node_modules/
