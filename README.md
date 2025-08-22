@@ -68,6 +68,7 @@ Other microservices are scaffolds and will be developed next.
 ```sql
 
 CREATE DATABASE ems_microservice;
+
 Update application.properties with your DB credentials.
 
 Build and repackage:
@@ -79,8 +80,7 @@ java -jar target/employee-service-0.0.1-SNAPSHOT.jar
 Access Swagger UI:
 http://localhost:8081/swagger-ui.html
 
-Next Steps
-
+Next Steps:
 Complete Department & Project Services
 Implement Auth Service with JWT
 Setup Gateway & Eureka Discovery
@@ -90,8 +90,8 @@ Optional Notification/Email Service
 ---
 
 ## License
-Currently **unlicensed**; license will be added upon stable release.
+Currently unlicensed; license will be added upon stable release.
 
 ---
 
-*This project is under active development. Stay tuned for updates on additional microservices and features.*
+This project is under active development. Stay tuned for updates on additional microservices and features.
