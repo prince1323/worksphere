@@ -91,8 +91,10 @@ Optional Notification/Email Service
 
 ## License
 
-Currently **unlicensed**; license will be added upon stable release.
+Currently unlicensed; license will be added upon stable release.
 
 ---
 
-*This project is under active development. Stay tuned for updates on additional microservices and features.*
+This project is under active development. Stay tuned for updates on additional microservices and features.
+
+Author: Prince Pandey
