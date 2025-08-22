@@ -49,7 +49,8 @@ WorkSphare (parent project)
 
 ## Current Status
 
-> ⚠️ Work in Progress  
+> ⚠️ Work in Progress
+ 
 > The **Employee Service** is fully implemented:
 > - DTOs & Mappers  
 > - Validation (`@NotBlank`, `@Email`)  
@@ -57,7 +58,7 @@ WorkSphare (parent project)
 > - Swagger documentation  
 > - REST endpoints: http://localhost:8081/api/employees
 
-> - The **Department Service** is fully implemented:
+> The **Department Service** is fully implemented:
 > - DTOs & Mappers
 > - Validation (@NotBlank, @Size)
 > - Global exception handling
