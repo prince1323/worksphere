@@ -10,11 +10,11 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>project-service</artifactId>
+	<artifactId>task-service</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Project Service</name>
-	<description>Manages project records (CRUD operations).</description>
+	<name>Task Service</name>
+	<description>Manages task records (CRUD operations).</description>
 
 	<dependencies>
 		<!-- Spring Boot Starter -->
