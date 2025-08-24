@@ -27,13 +27,13 @@ WorkSphare manages **employees, departments, and projects** in a modular microse
 
 ## Microservices Structure
 WorkSphare (parent project)
-├─ employee-service # CRUD for employees
-├─ department-service # CRUD for departments
-├─ project-service # Employee-project assignments
-├─ auth-service # Authentication & JWT
-├─ gateway-service # Spring Cloud Gateway
-├─ discovery-service # Eureka service registry
-└─ config-server (optional) # Centralized configuration
+├─ employee-service      # Manage employees (CRUD, validation, exception handling)
+├─ department-service    # Manage departments
+├─ project-service       # Manage projects
+├─ task-service          # Manage tasks assigned to employees/projects
+├─ gateway-service       # API Gateway (Spring Cloud Gateway)
+├─ service-registry      # Eureka Service Registry
+└─ config-server (planned) # Centralized configuration (future)
 
 ---
 
@@ -56,7 +56,7 @@ WorkSphare (parent project)
 > - Validation (`@NotBlank`, `@Email`)  
 > - Global exception handling  
 > - Swagger documentation  
-> - REST endpoints: http://localhost:8081/api/employees
+> - REST endpoints: http://localhost:8087/api/employees
 
 > The **Department Service** is fully implemented:
 > - DTOs & Mappers
@@ -65,7 +65,42 @@ WorkSphare (parent project)
 > - Swagger documentation
 > - REST endpoints: http://localhost:8084/api/departments
 
-Other microservices are scaffolds and will be developed next.
+> Project Service (project-service)
+> - CRUD operations for projects
+> - Validation & exception handling
+> - Swagger documentation
+> - REST endpoints:http://localhost:8085/api/projects
+
+> Task Service (task-service)
+> - CRUD operations for tasks
+> - Tasks linked with employees/projects
+> - Validation & exception handling
+> - Swagger documentation
+> - REST endpoints: http://localhost:8086/api/tasks
+
+> Service Registry (service-registry)
+> - Eureka server running on http://localhost:8761
+> - All microservices successfully registered
+
+> Gateway Service (gateway-service)
+> - Routes requests to respective microservices
+> - Load-balanced through Eureka
+
+Base URL:
+
+# Employee
+http://localhost:8080/api/employees
+http://localhost:8080/api/employees/1
+
+# Department
+http://localhost:8080/api/departments
+http://localhost:8080/api/departments/1
+
+# Project
+http://localhost:8080/api/projects
+
+# Task
+http://localhost:8080/api/tasks
 
 ---
 
