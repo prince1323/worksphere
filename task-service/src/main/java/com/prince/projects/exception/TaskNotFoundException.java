@@ -1,9 +1,9 @@
 package com.prince.projects.exception;
 
 @SuppressWarnings("serial")
-public class EmployeeNotFoundException extends RuntimeException
+public class TaskNotFoundException extends RuntimeException
 {
-	 public EmployeeNotFoundException(String msg) {
+	 public TaskNotFoundException(String msg) {
 	        super(msg);
 	    }
 }

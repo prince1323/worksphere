@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.prince.projects.dto.TaskDTO;
 import com.prince.projects.entity.TaskEntity;
+import com.prince.projects.exception.TaskNotFoundException;
 import com.prince.projects.mapper.TaskMapper;
 import com.prince.projects.repository.TaskRepository;
 
@@ -28,7 +29,7 @@ public class TaskService {
     public TaskDTO getTaskById(Long id) {
         return taskRepository.findById(id)
                 .map(TaskMapper::mapToTaskDto)
-                .orElseThrow(() -> new RuntimeException("Task not found with id: " + id));
+                .orElseThrow(() -> new TaskNotFoundException("Task not found with id: " + id));
     }
 
     public List<TaskDTO> getAllTasks() {
@@ -40,7 +41,7 @@ public class TaskService {
 
     public TaskDTO updateTask(Long id, TaskDTO taskDto) {
         TaskEntity task = taskRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Task not found with id: " + id));
+                .orElseThrow(() -> new TaskNotFoundException("Task not found with id: " + id));
 
         task.setTitle(taskDto.getTitle());
         task.setDescription(taskDto.getDescription());
